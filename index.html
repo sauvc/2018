@@ -9,56 +9,68 @@
 
   <!-- <link rel="apple-touch-icon" href="icon.png"> -->
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <!--[if lte IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
 
-  <nav>
-    <a href="/">SAUVC 2018</a>
-    <div>
-      <a href="#information">Information</a>
-      <a href="#competition">Competition</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#location">Location</a>
-      <a href="#sponsors">Sponsors</a>
-      <a href="#about">About Us</a>
-    </div>
+  <nav class="nav">
+    <a href="/" class="title">SAUVC 2018</a>
+    <ul class="menu">
+      <li><a href="#information">Information</a></li>
+      <li><a href="#competition">Competition</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+    <a href="#" class="current">🔊 Registration Open</a>
   </nav>
 
   <div class="hero">
-    <h3>Explore the wonders of the underwater autonomous robotics world with engineering!</h3>
-    <ul>
-      <li>5 Years</li>
-      <li>23 Countries</li>
-      <li>30 AUVs</li>
-      <li>0 Control</li>
+    <h3 class="synopsis">Explore the <span class="highlight">wonders</span> <br>of the underwater autonomous<br> <span class="highlight">robotics</span> world with engineering!</h3>
+    <ul class="stats">
+      <li>
+        <div class="num">5 Years</div>
+        <div class="caption">Competitions for years!</div>
+      </li>
+      <li>
+        <div class="num">23 Countries</div>
+        <div class="caption">Participants and mentors fly in around!</div>
+      </li>
+      <li>
+        <div class="num">30 AUVs</div>
+        <div class="caption">Participants and mentors fly in from </div>
+      </li>
+      <li>
+        <div class="num">0 Controls</div>
+        <div class="caption">Participants and mentors fly in from</div>
+      </li>
     </ul>
-    <h3>Welcome to SAUVC 2018</h3>
-    <h3>Singapore, March 9-12 2018</h3>
-    <button>REGISTER NOW!</button>
+    <h3 class="welcome">Welcome to<br><span class="welcome-name">SAUVC 2018</span><span class="welcome-info">Singapore, March 9-12</span></h3>
+    <a class="action">register here</a>
   </div>
 
   <section class="information">
-    <h2>Information</h2>
-    <ul>
+    <ul class="types">
       <li>
         <p>Competition</p>
-        <!-- Explain the challenge and learning -->
+        <p>The focus is on autonomous operations in a swimming pool format, rather than remote control in a small tank, and it is aimed at University, Polytechnic and school students. The Singapore AUV challenge emphasises on outreach, learning and skill development. The competition is open to Singapore and international participants.</p>
       </li>
       <li>
         <p>Mentorship</p>
-        <!-- Plenty of help and support -->
+        <p>To provide opportunities for students to experience the challenges of system engineering.To develop an appreciation, understanding and skills in AUV related technologies.</p>
       </li>
       <li>
         <p>Guest speakers</p>
-        <!-- Learn from the world experts -->
+        <p>The world full of autonomous robots but does that make them intelligent. The reality is robots are partially autonomous and for the most part controlled by commands either from a human or an external system. </p>
       </li>
       <li>
         <p>Get-Together</p>
-        <!-- Meet fellow engineers around the world -->
+        <p>Recently a lot of research in the area of cooperative robotics has been extended to the marine robotics domain. The main reason for this is economy-driven: multiple robots operating cooperatively can reduce the operation time and extend the area of coverage.</p>
       </li>
     </ul>
   </section>
@@ -71,32 +83,93 @@
 
   <section class="schedule">
     <h2>Schedule</h2>
-    <h3>Day 1: 9 March</h3>
-    <table>
-      <tr><td>Time</td><td>Event</td><td>Location</td></tr>
-    </table>
 
-    <h3>Day 2: 10 March</h3>
-    <table>
-      <tr><td>Time</td><td>Event</td><td>Location</td></tr>
-    </table>
+    <div class="schedule-day">
+      <h3 class="day">Day 1: 9 March</h3>
+      <table class="table">
+        <tr><td>9:15am</td><td>Registration</td><td>EE Lab</td></tr>
+        <tr><td>10:30am</td><td>Briefing</td><td>Auditorium</td></tr>
+        <tr><td>1:30pm</td><td>Lunch</td><td>Pool Side</td></tr>
+        <tr><td>2:30pm</td><td>Practice Rounds</td><td>Pool</td></tr>
+      </table>
+    </div>
 
-    <h3>Day 3: 11 March</h3>
-    <table>
-      <tr><td>Time</td><td>Event</td><td>Location</td></tr>
-    </table>
+    <div class="schedule-day">
+      <h3 class="day">Day 2: 10 March</h3>
+      <table class="table">
+        <tr><td>9:15am</td><td>Registration</td><td>EE Lab</td></tr>
+        <tr><td>10:30am</td><td>Briefing</td><td>Auditorium</td></tr>
+        <tr><td>1:30pm</td><td>Lunch</td><td>Pool Side</td></tr>
+        <tr><td>2:30pm</td><td>Practice Rounds</td><td>Pool</td></tr>
+      </table>
+    </div>
 
-    <h3>Day 4: 12 March</h3>
-    <table>
-      <tr><td>Time</td><td>Event</td><td>Location</td></tr>
-    </table>
+    <div class="schedule-day">
+      <h3 class="day">Day 3: 11 March</h3>
+      <table class="table">
+        <tr><td>9:15am</td><td>Registration</td><td>EE Lab</td></tr>
+        <tr><td>10:30am</td><td>Briefing</td><td>Auditorium</td></tr>
+        <tr><td>1:30pm</td><td>Lunch</td><td>Pool Side</td></tr>
+        <tr><td>2:30pm</td><td>Practice Rounds</td><td>Pool</td></tr>
+      </table>
+    </div>
+
+    <div class="schedule-day">
+      <h3 class="day">Day 4: 12 March</h3>
+      <table class="table">
+        <tr><td>9:15am</td><td>Registration</td><td>EE Lab</td></tr>
+        <tr><td>10:30am</td><td>Briefing</td><td>Auditorium</td></tr>
+        <tr><td>1:30pm</td><td>Lunch</td><td>Pool Side</td></tr>
+        <tr><td>2:30pm</td><td>Practice Rounds</td><td>Pool</td></tr>
+      </table>
+    </div>
   </section>
 
-  <section class="location">
+  <section class="travel">
     <h2>Location</h2>
-    <p>Google Map</p>
-    <p>Photo of the swimming pool</p>
-    <p>Skyline of Singapore</p>
+    <img class="landscape" src="img/singapore.jpg" alt="Singapore landscape">
+
+    <ul class="types">
+      <li>
+        <p>Immigration</p>
+        <!-- Explain the challenge and learning -->
+      </li>
+      <li>
+        <p>Visa</p>
+        <!-- Plenty of help and support -->
+      </li>
+      <li>
+        <p>By Bus</p>
+        <!-- Learn from the world experts -->
+      </li>
+      <li>
+        <p>Get-Together</p>
+        <!-- Meet fellow engineers around the world -->
+      </li>
+    </ul>
+  </section>
+
+  <section class="venue">
+    <h2>Venue</h2>
+
+    <p>
+      Singapore Polytechnic
+      <br>
+      500 Dover Road
+      <br>
+      Singapore 123456
+    </p>
+
+    <p>Google Maps</p>
+
+    <ul class="types">
+      <li>
+        <p>By Public Transport</p>
+      </li>
+      <li>
+        <p>By Car</p>
+      </li>
+    </ul>
   </section>
 
   <section class="sponsors">
