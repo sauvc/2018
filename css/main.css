@@ -111,11 +111,11 @@ Pallette:
 */
 
 
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #1C455D;
   font-size: 1.4em;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,7 +138,7 @@ a:hover, a:active {
   color: #A0DCF1;
 }
 
-section, footer {
+section {
   width: 60%;
   margin: 0 auto;
 }
@@ -151,19 +151,6 @@ section, footer {
   padding: 1em;
   display: flex;
   justify-content: space-between;
-}
-
-.title {
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.title:link, .title:visited {
-  color: #1C455D;
-}
-
-.title:hover, .title:active {
-  color: #35A6D3;
 }
 
 .menu {
@@ -182,8 +169,22 @@ section, footer {
 }
 
 .current {
-  padding: 0 .5em;
-  background: #F8C86C;
+  padding: 0;
+  border-bottom: 5px solid #F8C86C;
+  display: block;
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.title:link, .title:visited {
+  color: #1C455D;
+}
+
+.title:hover, .title:active {
+  color: #35A6D3;
 }
 
 .current:link, .current:visited {
@@ -331,7 +332,7 @@ section, footer {
   display: inline-block;
   width: 40%;
   vertical-align: top;
-  margin: 3em 1em;
+  margin: 1em;
 }
 
 .types li:nth-child(4n) .type-title {
@@ -350,14 +351,13 @@ section, footer {
   color: #F15E50;
 }
 
+.type-title, .type-content, .type-link {
+  margin: .2em;
+}
+
 .type-title {
   font-size: 1.5em;
   font-weight: bold;
-  margin: .5em;
-}
-
-.type-content {
-  margin: 0;
 }
 
 .type-link:link, .type-link:visited {
@@ -379,6 +379,7 @@ section, footer {
   list-style-type: none;
   margin: 0 auto;
   display: block;
+  padding: 0;
 }
 
 .team li {
@@ -398,8 +399,85 @@ section, footer {
   margin: 0;
 }
 
+@media only screen and (max-width: 1450px) {
+  .stats li {
+    width: 22vw;
+  }
+}
 
+@media only screen and (max-width: 1300px) {
+  body {
+    font-size: 1.2em;
+  }
 
+  section {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .menu {
+    display: block;
+  }
+
+  .stats li {
+    width: 24vw;
+  }
+
+  .types li {
+    margin: .5em;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 1.1em;
+  }
+
+  section {
+    width: 95%;
+  }
+
+  .current:link, .current:visited, .current:hover, .current:active {
+    color: #F15E50;
+    border-bottom-style: none;
+    font-weight: bold;
+  }
+
+  .synopsis {
+    padding: 2em 0;
+  }
+
+  .num span {
+    display: block;
+  }
+
+  .types li {
+    width: 100%;
+    margin: 1em 0;
+    text-align: left;
+  }
+
+  .schedule-day {
+    margin: 4em 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu li, .title, .current {
+    width: 100%;
+    padding: .2em;
+  }
+
+  .welcome {
+    margin: .5em 0;
+  }
+
+  .num {
+    font-size: 1em;
+  }
+}
 
 
 /* ==========================================================================
