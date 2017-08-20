@@ -28,10 +28,10 @@
   -moz-border-radius: 15px;
   -webkit-border-radius:15px;
   border-radius: 15px;
-  -webkit-animation: bubblewobble 0.4s infinite linear;
-  -moz-animation: bubblewobble 0.4s infinite linear;
-  -ms-animation: bubblewobble 0.4s infinite linear;
-  animation: bubblewobble 0.4s infinite linear;
+  -webkit-animation: bubblewobble 1s infinite linear;
+  -moz-animation: bubblewobble 1s infinite linear;
+  -ms-animation: bubblewobble 1s infinite linear;
+  animation: bubblewobble 1s infinite linear;
 }
 
 @-webkit-keyframes bubblerise {
