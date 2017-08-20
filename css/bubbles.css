@@ -16,6 +16,7 @@
   animation: bubblerise 4s infinite ease-in;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+  transform: rotateZ(360deg);
 }
 
 .bubble {
@@ -32,6 +33,7 @@
   -moz-animation: bubblewobble 0.4s infinite linear;
   -ms-animation: bubblewobble 0.4s infinite linear;
   animation: bubblewobble 0.4s infinite linear;
+  transform: rotateZ(360deg);
 }
 
 @-webkit-keyframes bubblerise {
