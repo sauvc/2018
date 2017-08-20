@@ -17,6 +17,8 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 
 .bubble {
@@ -34,16 +36,18 @@
   -ms-animation: bubblewobble 0.4s infinite linear;
   animation: bubblewobble 0.4s infinite linear;
   transform: rotateZ(360deg);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 
 @-webkit-keyframes bubblerise {
   0% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
   5% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
@@ -52,19 +56,19 @@
     opacity: 1;
   }
   100% {
-    bottom: 100%;
+    transform: translateY(-800px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
 }
 @-moz-keyframes bubblerise {
   0% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
   5% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
@@ -73,19 +77,19 @@
     opacity: 1;
   }
   100% {
-    bottom: 100%;
+    transform: translateY(-800px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
 }
 @-ms-keyframes bubblerise {
   0% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
   5% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
@@ -94,19 +98,19 @@
     opacity: 1;
   }
   100% {
-    bottom: 100%;
+    transform: translateY(-800px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
 }
 @keyframes bubblerise {
-  0% {
-    bottom: 0;
+   0% {
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
   5% {
-    bottom: 0;
+    transform: translateY(0px);
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
@@ -115,40 +119,40 @@
     opacity: 1;
   }
   100% {
-    bottom: 100%;
+    transform: translateY(-800px);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
   }
 }
 @-webkit-keyframes bubblewobble {
   0% {
-    margin-left: 0;
+    transform: translateX(0px);
   }
   50% {
-    margin-left: 2px;
+    transform: translateX(2px);
   }
 }
 @-moz-keyframes bubblewobble {
   0% {
-    margin-left: 0;
+    transform: translateX(0px);
   }
   50% {
-    margin-left: 2px;
+    transform: translateX(2px);
   }
 }
 @-ms-keyframes bubblewobble {
   0% {
-    margin-left: 0;
+    transform: translateX(0px);
   }
   50% {
-    margin-left: 2px;
+    transform: translateX(2px);
   }
 }
 @keyframes bubblewobble {
   0% {
-    margin-left: 0;
+    transform: translateX(0px);
   }
   50% {
-    margin-left: 2px;
+    transform: translateX(2px);
   }
 }

@@ -3,7 +3,7 @@
     var heroDiv = document.querySelector('.hero');
 
     // Settings
-    var min_bubble_count = 20, // Minimum number of bubbles
+    var min_bubble_count = 15, // Minimum number of bubbles
         max_bubble_count = 20, // Variance in bubble size(px)
         min_bubble_size = 3, // Smallest possible bubble diameter (px)
         max_bubble_size = 12; // Variance in bubble size(px)
