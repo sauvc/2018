@@ -379,18 +379,25 @@ section {
   margin: .5em 0;
 }
 
-.team {
+.team, .sponsors {
   list-style-type: none;
   margin: 0 auto;
   display: block;
   padding: 0;
 }
 
-.team li {
+.sponsors li, .team li {
   display: inline-block;
   vertical-align: top;
-  width: 15%;
   margin: .5%;
+}
+
+.sponsors li {
+  width: 30%;
+}
+
+.team li {
+  width: 15%;
 }
 
 .people-pic {
