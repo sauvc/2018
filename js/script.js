@@ -1,5 +1,9 @@
 (function(){
   window.addEventListener('load', function(){
+    makeBubbles();
+    hookFBMessegerButton();
+  })
+  function makeBubbles(){
     var heroDiv = document.querySelector('.hero');
 
     // Settings
@@ -77,5 +81,21 @@
       bubbleDivsList[index].style.width = size_rand + 'px';
       bubbleDivsList[index].style.height = size_rand + 'px';
     });
-  })
+  }
+
+  function hookFBMessegerButton(){
+    document.querySelector('#fb-button').onclick = function (event) {
+      event.preventDefault();
+      window.open('//m.me/SingaporeAUVChallenge', 'messenger', 'top=0, left=' + (screen.width-500) + ', width=500, height=' + screen.height);
+      document.querySelector('#fb-container').classList.add('inactive');
+      setTimeout(function(){
+        checkFocus = setInterval(function(){
+          if (document.hasFocus()) {
+            document.querySelector('#fb-container').classList.remove('inactive');
+            clearInterval(checkFocus);
+          }
+        }, 1)
+      }, 1000);
+    }
+  }
 }())
