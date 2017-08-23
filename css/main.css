@@ -413,8 +413,8 @@ section {
 
 .sponsors-container {
   padding: 2vw 2vw 2vw;
-  background-color: #E5F2F7;
-  height: 15vw;
+  background-color: #FBFBFD;
+  height: 10vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -422,7 +422,7 @@ section {
 }
 
 .sponsor-img{
-  max-height: 100%
+  max-height: 90%
 }
 
 .sponsors li, .team li {
@@ -432,7 +432,7 @@ section {
 }
 
 .sponsors li {
-  width: 25vw;
+  width: 19vw;
 }
 
 .team li {
@@ -498,7 +498,7 @@ section {
 }
 #fb-button:hover, #fb-container.inactive #fb-button {
   color: #0084ff;
-  background: transparent;
+  background: white;
 }
 #fb-button:hover .fb-icon, #fb-container.inactive #fb-button .fb-icon {
   fill: #0084ff;
