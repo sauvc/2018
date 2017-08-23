@@ -436,6 +436,7 @@ section {
 
 .team li {
   width: 15%;
+  padding-right: 10px;
 }
 
 .people-pic {
