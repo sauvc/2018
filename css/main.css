@@ -449,6 +449,12 @@ section {
   margin: 0;
 }
 
+.footer {
+  background: #A0DCF1;
+  height: 100px;
+  margin-top: 3em;
+}
+
 #fb-container{
   display: flex;
   align-items: center;
