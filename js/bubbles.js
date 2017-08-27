@@ -5,7 +5,7 @@
     const MAX_GAIN = 0.5;
     const FADE_TIME = 2;
 
-    var hero = document.getElementById('hero');
+    var action = document.getElementById('action');
 
     // WebAudio Stuff
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -31,13 +31,14 @@
       source.buffer = decodedBuf;
       source.start(0);
       gain.gain.setValueAtTime(0,ac.currentTime);
-      if (isElementInViewport(hero)){
+      if (isElementInViewport(action)){
         fadeIn();
       }
     }, null, ac);
 
     function fadeIn(){
       if (!fadingIn){
+        console.log("fading in")
         gain.gain.linearRampToValueAtTime(MAX_GAIN,ac.currentTime+FADE_TIME);
         fadingIn = true;
         fadingOut = false;
@@ -46,7 +47,9 @@
     }
 
     function fadeOut(){
+
       if (!fadingOut){
+        console.log("fading out")
         gain.gain.linearRampToValueAtTime(0,ac.currentTime+FADE_TIME);
         fadingOut = true;
         fadingIn = false;
@@ -54,7 +57,7 @@
     }
 
     window.addEventListener('scroll', function() {
-      if (isElementInViewport(hero)){
+      if (isElementInViewport(action)){
         fadeIn();
       }else{
         fadeOut();
@@ -68,8 +71,8 @@
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)+100) &&
-        (rect.right <= (window.innerWidth || document.documentElement.clientWidth)+100));
+        (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) &&
+        (rect.right <= (window.innerWidth || document.documentElement.clientWidth)));
     }
 
 
