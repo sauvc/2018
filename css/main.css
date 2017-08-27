@@ -263,14 +263,13 @@ section {
   border-radius: 10px;
 }
 
-.action:link {
+.action:link, .action:visited, .action:hover, .action:active {
   color: #1C455D;
 }
 
 .action:hover {
   cursor: pointer;
   background: #F15E50;
-  color: #1C455D;
 }
 
 .social {
