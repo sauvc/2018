@@ -353,40 +353,40 @@ section {
   display: flex;
 }
 
-.types {
+.info-list {
   padding: 0;
   list-style-type: none;
   text-align: center;
 }
 
-.types li {
+.info-list li {
   display: inline-block;
   width: 40%;
   vertical-align: top;
   margin: 1em;
 }
 
-.types li:nth-child(4n) .type-title {
+.info-list li:nth-child(4n) .info-title {
   color: #35A6D3;
 }
 
-.types li:nth-child(4n+1) .type-title {
+.info-list li:nth-child(4n+1) .info-title {
   color: #467F9F;
 }
 
-.types li:nth-child(4n+2) .type-title {
+.info-list li:nth-child(4n+2) .info-title {
   color: #F8C86C;
 }
 
-.types li:nth-child(4n+3) .type-title {
+.info-list li:nth-child(4n+3) .info-title {
   color: #F15E50;
 }
 
-.type-title, .type-content, .type-link {
+.info-title, .info-content, .type-link {
   margin: .2em;
 }
 
-.type-title {
+.info-title {
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -432,12 +432,13 @@ section {
   margin: 0 auto;
   display: block;
   padding: 0;
+  text-align: center;
 }
 
 .sponsors-container {
   padding: 2vw 2vw 2vw;
   background-color: #FBFBFD;
-  height: 10vw;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,21 +457,23 @@ section {
 
 .sponsors li {
   width: 19vw;
+  margin: 1em;
 }
 
 .team li {
   width: 15%;
-  padding-right: 10px;
+  padding: 15px;
 }
 
-.people-pic {
+.team-pic {
   max-width: 100%;
   border-radius: 50%;
 }
 
-.people-name {
+.team-name {
   text-align: center;
-  margin: 0;
+  margin: .2em;
+  font-size: .8em;
 }
 
 .footer {
@@ -526,10 +529,12 @@ section {
   display: block;
   transition: inherit;
 }
+
 #fb-button:hover, #fb-container.inactive #fb-button {
   color: #0084ff;
   background: white;
 }
+
 #fb-button:hover .fb-icon, #fb-container.inactive #fb-button .fb-icon {
   fill: #0084ff;
 }
@@ -612,6 +617,10 @@ section {
     width: 100%;
     margin: 1em 0;
     text-align: left;
+  }
+
+  .sponsors li {
+    width: 35vw;
   }
 
   .schedule-day {
