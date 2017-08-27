@@ -355,10 +355,15 @@ section {
   display: flex;
 }
 
-.info-list {
+.auv-list, .info-list {
   padding: 0;
   list-style-type: none;
   text-align: center;
+}
+
+.auv-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .info-list li {
@@ -391,6 +396,10 @@ section {
 .info-title {
   font-size: 1.5em;
   font-weight: bold;
+}
+
+.auv-list img {
+  max-width: 200px;
 }
 
 .type-link:link, .type-link:visited {
@@ -594,6 +603,10 @@ section {
     display: block;
   }
 
+  .auv-list img {
+    max-width: 150px;
+  }
+
   .stats li {
     width: 24vw;
   }
@@ -656,6 +669,10 @@ section {
     font-size: 1em;
     margin-bottom: 0;
   }
+
+  .auv-list img {
+    max-width: 120px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -678,6 +695,10 @@ section {
 
   .table {
     font-size: .9em;
+  }
+
+  .auv-list img {
+    max-width: 80px;
   }
 }
 
