@@ -252,8 +252,11 @@ section {
 }
 
 .action {
-  background: #F59A63;
   margin: 0 auto 1.5em;
+}
+
+.action-button {
+  background: #F59A63;
   text-align: center;
   display: inline-block;
   text-transform: uppercase;
@@ -263,11 +266,11 @@ section {
   border-radius: 10px;
 }
 
-.action:link, .action:visited, .action:hover, .action:active {
+.action-button:link, .action-button:visited, .action-button:hover, .action-button:active {
   color: #1C455D;
 }
 
-.action:hover {
+.action-button:hover {
   cursor: pointer;
   background: #F15E50;
 }
