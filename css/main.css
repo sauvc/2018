@@ -477,9 +477,21 @@ section {
 }
 
 .footer {
-  background: #A0DCF1;
   height: 100px;
   margin-top: 3em;
+}
+
+.footer p {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+  margin-bottom: -70px;
+}
+
+.footer img {
+  display: block;
+  margin: .5em auto;
+  height: 50px;
 }
 
 #fb-container{
@@ -584,9 +596,13 @@ section {
     width: 24vw;
   }
 
-  .types li {
+  .info-list li {
     margin: .5em;
     width: 45%;
+  }
+
+  .footer p {
+    margin-bottom: -20px;
   }
 }
 
@@ -613,7 +629,7 @@ section {
     display: block;
   }
 
-  .types li {
+  .info-list li {
     width: 100%;
     margin: 1em 0;
     text-align: left;
@@ -629,6 +645,14 @@ section {
 
   .map, .address {
     width: 100%;
+  }
+
+  .footer {
+    margin-top: 2em;
+  }
+  .footer p {
+    font-size: 1em;
+    margin-bottom: 0;
   }
 }
 
