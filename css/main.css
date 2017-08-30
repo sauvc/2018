@@ -372,9 +372,15 @@ section {
 .num {
   background: #1C455D;
   color: #F15E50;
-  padding: 1em .5em;
-  font-size: 1.5em;
+  padding: .5em;
+  font-size: 2em;
   border: 1px solid #E5F2F7;
+  font-weight: bold;
+}
+
+.num span {
+  font-size: .5em;
+  font-weight: normal;
 }
 
 .caption {
@@ -836,10 +842,6 @@ section {
 
   .welcome {
     margin: .5em 0;
-  }
-
-  .num {
-    font-size: 1em;
   }
 
   .table {
