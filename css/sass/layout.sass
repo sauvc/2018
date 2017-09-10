@@ -1,0 +1,63 @@
+// Pallette:
+// #A0DCF1
+// #F15E50
+// #1C455D
+// #E5F2F7
+// #35A6D3
+// #467F9F
+// #F59A63
+// #F8C86C
+
+body
+  font-family: 'Source Sans Pro', sans-serif
+  color: #1C455D
+  font-size: 1.4em
+  position: relative
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+h2
+  color: #F15E50
+  font-size: 3em
+  margin: 1em 0
+
+a
+  &:link, &:visited
+    text-decoration: none
+    color: #35A6D3
+  &:hover, &:active
+    color: #A0DCF1
+
+section
+  width: 60%
+  margin: 0 auto
+
+.table
+  display: block
+  width: 100%
+  border-collapse: collapse
+  tr
+    padding: 1em
+    border-top-style: solid
+    border-top-width: 4px
+    &:nth-child(3n)
+      border-top-color: #F15E50
+    &:nth-child(3n+1)
+      border-top-color: #35A6D3
+    &:nth-child(3n+2)
+      border-top-color: #F59A63
+  td
+    padding: 1em
+    &:nth-child(1)
+      width: 9%
+    &:nth-child(2)
+      width: 61%
+    &:nth-child(3)
+      width: 30%
+
+@media only screen and (max-width: 1300px)
+  body
+    font-size: 1.2em
+  section
+    width: 80%
