@@ -43,67 +43,6 @@
   display: flex;
 }
 
-.auv-list, .info-list {
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-}
-
-.auv-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.info-list li {
-  display: inline-block;
-  width: 40%;
-  vertical-align: top;
-  margin: 1em;
-}
-
-.info-list li:nth-child(4n) .info-title {
-  color: #35A6D3;
-}
-
-.info-list li:nth-child(4n+1) .info-title {
-  color: #467F9F;
-}
-
-.info-list li:nth-child(4n+2) .info-title {
-  color: #F8C86C;
-}
-
-.info-list li:nth-child(4n+3) .info-title {
-  color: #F15E50;
-}
-
-.info-title, .info-content, .type-link {
-  margin: .2em;
-}
-
-.info-title {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.auv-list img {
-  max-width: 200px;
-}
-
-.type-link:link, .type-link:visited {
-  color: #35A6D3;
-}
-
-.type-link:hover, .type-link:active {
-  text-decoration: underline;
-}
-
-.type-link:after {
-  content: "›";
-  display: inline-block;
-  padding-left: .3em;
-  margin: .5em 0;
-}
 
 .map {
   position: relative;
