@@ -1,0 +1,117 @@
+.nav
+  padding: 1em
+  position: fixed
+  top: 0px
+  left: 0px
+  right: 0px
+  z-index: 1
+  background: #fff
+  border-bottom: 1px solid #E5F2F7
+
+.menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  li
+    display: inline-block
+    margin: 0 1em
+
+.mobile-menu
+  display: none
+  width: 100%
+  background: #fff
+  line-height: 1.6em
+  font-weight: 400
+  width: 100%
+  text-align: center
+  position: fixed
+  margin: 0 auto
+  top: 0px
+  left: 0px
+  right: 0px
+  z-index: 1
+  border-bottom: 1px solid #E5F2F7
+  ul
+    list-style-type: none
+    margin: 0 auto
+    padding-left: 0
+    text-align: center
+    width: 100%
+    position: absolute
+    background: #fff
+  li
+    display: inline-block
+    ul
+      display: none
+      li
+        display: block
+        float: none
+        a
+          width: auto
+          min-width: 100px
+          padding: 0 20px
+    &:hover a
+      color: #35A6D3
+      background-color: #E5F2F7
+    &:hover ul a
+      background: #fff
+      color: #2F3036
+      height: 40px
+      line-height: 40px
+    &:hover .mobile-menu ul a:hover
+      color: #35A6D3
+    a
+      display: block
+      min-width: 140px
+      text-align: center
+      color: #35A6D3
+      background: #fff
+      text-decoration: none
+      margin-left: -5px
+      padding: 10px 0
+      -webkit-transition: all 0.4s ease 0s
+      -moz-transition: all 0.4s ease 0s
+      -ms-transition: all 0.4s ease 0s
+      -o-transition: all 0.4s ease 0s
+      transition: all 0.4s ease 0s
+  .show-menu
+    text-decoration: none
+    color: #35A6D3
+    background: #fff
+    text-align: center
+    padding: 10px 15px
+    display: none
+    cursor: pointer
+    text-transform: uppercase
+    span
+      padding-left: 35px
+  input[type=checkbox]
+    display: none
+    &:checked ~ #menu
+      display: block
+
+@media screen and (max-width: 800px)
+  .nav
+    display: none
+
+  .mobile-menu
+    display: block
+    .lines
+      border-bottom: 15px double #35A6D3
+      border-top: 5px solid #35A6D3
+      content: ""
+      height: 5px
+      width: 15px
+      padding-right: 15px
+      float: right
+    ul
+      position: static
+      display: none
+      li
+        width: 100%
+    li
+      margin-bottom: 1px
+      a
+        width: 100%
+    .show-menu
+      display: block
