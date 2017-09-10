@@ -32,3 +32,26 @@ a
 section
   width: 60%
   margin: 0 auto
+
+.table
+  display: block
+  width: 100%
+  border-collapse: collapse
+  tr
+    padding: 1em
+    border-top-style: solid
+    border-top-width: 4px
+    &:nth-child(3n)
+      border-top-color: #F15E50
+    &:nth-child(3n+1)
+      border-top-color: #35A6D3
+    &:nth-child(3n+2)
+      border-top-color: #F59A63
+  td
+    padding: 1em
+    &:nth-child(1)
+      width: 9%
+    &:nth-child(2)
+      width: 61%
+    &:nth-child(3)
+      width: 30%

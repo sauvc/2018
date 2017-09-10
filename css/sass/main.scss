@@ -25,30 +25,6 @@
   color: #1C455D;
 }
 
-.social {
-  padding: 0;
-  list-style-type: none;
-  background: #E5F2F7;
-  margin: 0;
-  text-align: center;
-}
-
-.social li {
-  display: inline-block;
-  margin: 1em;
-}
-
-.social img {
-  max-width: 60px;
-  max-height: 30px;
-}
-
-.social a {
-  font-size: 1.2em;
-  vertical-align: middle;
-  margin: 0 .2em;
-}
-
 .schedule-day {
   margin: 5em 0;
 }
@@ -57,45 +33,7 @@
   margin: 1em 0;
 }
 
-.table {
-  display: block;
-  width: 100%;
-  border-collapse: collapse;
-}
 
-.table tr {
-  padding: 1em;
-  border-top-style: solid;
-  border-top-width: 4px;
-}
-
-.table tr:nth-child(3n) {
-  border-top-color: #F15E50
-}
-
-.table tr:nth-child(3n+1) {
-  border-top-color: #35A6D3;
-}
-
-.table tr:nth-child(3n+2) {
-  border-top-color: #F59A63;
-}
-
-.table td {
-  padding: 1em;
-}
-
-.table td:nth-child(1) {
-  width: 9%;
-}
-
-.table td:nth-child(2) {
-  width: 61%;
-}
-
-.table td:nth-child(3) {
-  width: 30%;
-}
 
 .landscape {
   max-width: 100%;
