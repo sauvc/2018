@@ -36,6 +36,14 @@
       }
     })
 
+    document.addEventListener("visibilitychange", function(){
+      if (document.visibilityState == 'visible'){
+        fadeIn();
+      }else if (document.visibilityState == 'hidden' || document.visibilityState == 'unloaded' ){
+        fadeOut();
+      }
+    });
+
 
     function fadeIn(){
       if (!fadingIn){
