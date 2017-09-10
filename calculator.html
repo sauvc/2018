@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		.points {
+			font-weight: bold;
+		}
+		.blue {
+			color: blue
+		}
+		.red {
+			color: red
+		}
+	</style>
+	<script type="text/javascript">
+		var taskPoints = 0;
+		var task3Points = 0;
+		var runTimePoints = 0;
+		var runTimeBonusLabel;
+		var totalEl;
+		var endOfAttemptInput;
+		var runtimeInput;
+		window.addEventListener('load', function(){
+			totalEl = document.getElementById('total-points');
+			var allCheckInputs = document.querySelectorAll('input[type=checkBox]');
+			for (index = 0; index < allCheckInputs.length; index++){
+				allCheckInputs[index].addEventListener('change', recalculatePoints)
+			}
+			var task3Inputs = document.querySelectorAll('#task3 input[type=radio]');
+			for (index = 0; index < task3Inputs.length; index++){
+				task3Inputs[index].addEventListener('change', recalculateTask3Points)
+			}
+
+			runTimeBonusLabel = document.getElementById('run-time-bonus');
+			runtimeInput = document.getElementById('run-time');
+			endOfAttemptInput = document.getElementById('end-of-attempt')
+
+			runtimeInput.addEventListener('input', recalculateRunTimeBonus);
+		});
+
+		function recalculateRunTimeBonus(){
+				var bonus = parseFloat((((900 - parseFloat(runtimeInput.value)) * 0.03) || 0).toFixed(2));
+				console.log(bonus);
+				if (endOfAttemptInput.checked){
+					runTimeBonusLabel.innerHTML = bonus;
+					runTimePoints = bonus;
+				}else{
+					runTimeBonusLabel.innerHTML = 0;
+					runTimePoints = 0;
+				}
+				updateTotal();
+		}
+
+		function recalculatePoints(ev){
+			if (ev.target.checked){
+				taskPoints += parseInt(ev.target.dataset.points);
+			}else {
+				taskPoints -= parseInt(ev.target.dataset.points);
+			}
+			if (ev.target == endOfAttemptInput){
+				recalculateRunTimeBonus();
+			}
+			updateTotal()
+		}
+
+		function recalculateTask3Points(ev){
+			task3Points = parseInt(ev.target.dataset.points);
+			updateTotal();
+		}
+
+		function updateTotal(){
+			totalEl.innerHTML = "Total = " + (taskPoints+task3Points+runTimePoints) + " pts";
+		}
+	</script>
+</head>
+<body>
+
+<h1 id="total-points">Total = 0 pts</h1>
+
+<div>
+	<h2> AUV Bonus </h2>
+	<h3>Dimension Bonus</h3>
+	<label> Less than  70 cm × 50 cm × 50 cm <span class="points"> +10 pts </span></label> <input type="checkBox" name="dimension-bonus" data-points=10>
+	<h3>Weight Bonus</h3>
+	<label> Less than  40kgs in air <span class="points"> +10 pts </span></label> <input type="checkBox" name="weight-bonus" data-points=10>
+</div>
+
+<div>
+	<h2> Task 1 - Navigation </h2>
+	<label> Pass through the gate <span class="points"> +10 pts </span></label> <input type="checkBox" name="task1" data-points=10>
+</div>
+
+<div id="task3">
+	<h2> Task 2 - Target Acquisation </h2>
+		<p> <label>Drop the ball in the <span class="blue">blue drum </span> <span class="points"> +30 pts </span> </label> <input type="radio" name="task2" data-points=30 >  </p>
+		<p> <label>Drop the ball in the <span class="red"> red drum </span> with the pinger <span class="points"> +50 pts </span> </label> <input type="radio" name="task2" data-points=50"> </p>
+		<p> <label>Dropping the ball in any other <span class="red"> red drum </span> <span class="points"> +10 pts </span> </label> <input type="radio" name="task2" data-points=10> </p>
+		<p> <label>None </label> <input type="radio" name="task2" data-points=0 checked> </p>
+</div>
+
+<div>
+	<h2> Task 3 - Target Reacquisition </h2>
+	<label>Picks up the ball and holds on to it <span class="points"> +60 pts </span></label> <input type="checkBox" name="task3" data-points=60>
+</div>
+
+<div>
+	<h2> Task 4 - Localisation </h2>
+	<label>Causes the ball to drop from the flare <span class="points"> +40 pts </span></label> <input type="checkBox" name="task4" data-points=40>
+</div>
+
+<div>
+	<h2> End of attempt </h2>
+	<label> Breaching the surface any point during the mission <span class="points"> +5 pts </span> </label><input id="end-of-attempt" type="checkBox" name="end-of-attempt" data-points=5>
+</div>
+
+<div>
+	<h2> Timing Bonus </h2>
+	<label> At the end of an attempt, AUV has successfully completed at least the Navigation task and any other task <span class="points"> (900 - <input id="run-time" type="number" name="run-time" placeholder="Run Time e.g. 100"> sec )  * 0.03 = <label id="run-time-bonus"> 0 </label> pts </span> </label>
+</div>
+
+<div>
+	<h2> Penaties</h2>
+	<h3> Gate Penalty </h3>
+	<label> Touching the gate	 <span class="points"> -2 pts </span></label> <input type="checkBox" name="gate-penalty" data-points=-2>
+	<h3>Wall/Bottom Penalty</h3>
+	<label> Touching the bottom of the pool or wall <span class="points"> -5 pts </span></label> <input type="checkBox" name="wall-penalty" data-points=-5>
+</div>
+
+</body>
+</html>
