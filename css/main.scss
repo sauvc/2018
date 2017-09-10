@@ -170,7 +170,7 @@ section {
 }
 
 .mobile-menu {
-  display:block;
+  display:none;
   width:100%;
   background: #fff/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
   line-height: 1.6em;
@@ -271,7 +271,7 @@ section {
 }
 
 .mobile-menu .show-menu span{
-   padding-left: 35px;
+  padding-left: 35px;
 }
 
 /*Hide checkbox*/
@@ -950,6 +950,10 @@ section {
 @media screen and (max-width : 800px){
   .nav {
     display: none;
+  }
+
+  .mobile-menu {
+    display: block;
   }
   .mobile-menu .lines {
     border-bottom: 15px double #35A6D3;
