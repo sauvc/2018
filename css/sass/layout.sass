@@ -33,7 +33,10 @@ section
   width: 60%
   margin: 0 auto
 
-.table
+code
+  background: #E5F2F7
+
+.table, .table-points
   display: block
   width: 100%
   border-collapse: collapse
@@ -49,12 +52,44 @@ section
       border-top-color: #F59A63
   td
     padding: 1em
+
+.table td
+  &:nth-child(1)
+    width: 9%
+  &:nth-child(2)
+    width: 61%
+  &:nth-child(3)
+    width: 30%
+
+.table-points
+  font-size: .8em
+  td
     &:nth-child(1)
-      width: 9%
-    &:nth-child(2)
-      width: 61%
-    &:nth-child(3)
       width: 30%
+      font-weight: bold
+    &:nth-child(2)
+      text-align: right
+      width: 40%
+    &:nth-child(3)
+      width: 20%
+      text-align: center
+      font-weight: bold
+    &:nth-child(4)
+      width: 10%
+      text-align: center
+  p
+    margin: .2em
+
+.input-points
+  width: 50px
+  border: none
+  border-bottom: 3px solid #1C455D
+  text-align: center
+  font-family: "Source Sans Pro",sans-serif
+  font-weight: bold
+  color: #1C455D
+  background: #E5F2F7
+
 
 @media only screen and (max-width: 1300px)
   body

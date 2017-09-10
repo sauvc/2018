@@ -141,6 +141,95 @@
     <p>Detailed explaination of the various tasks of the competition and rules are in the <a href="https://sauvc.github.io/rulebook/">Rulebook</a>.</p>
     <p>The competition is open to students from all over the world. A team may consist of up to 8 participants. At least half of the participants must be students at the time of registration.</p>
 
+    <h3 class="day">Calculate your score! <span id="total-points">Total: 0 pts</span></h3>
+
+    <table class="table-points">
+    	<tr>
+    		<td>AUV Bonus</td>
+    		<td>
+    			<p>Less than <code>70 cm × 50 cm × 50 cm</code></p>
+    			<p>Less than <code>40 kg</code> weighed in air</p>
+    		</td>
+    		<td>
+    			<p><span class="points">+10</span></p>
+    			<p><span class="points">+10</span></p>
+    		</td>
+    		<td>
+    			<p><input type="checkbox" name="dimension-bonus" data-points=10></p>
+    			<p><input type="checkbox" name="weight-bonus" data-points=10></p>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>Task 1 - Navigation</td>
+    		<td><p>Pass through the gate</p></td>
+    		<td><p><span class="points">+10</span></p></td>
+    		<td><p><input type="checkbox" name="task1" data-points=10></span></p></td>
+    	</tr>
+    	<tr>
+    		<td>Task 2 - Target Acquisation</td>
+    		<td>
+    			<p>Drop the ball in the <span class="blue">blue drum </span></p>
+    			<p>Drop the ball in the <span class="red"> red drum </span> with the pinger <span class="points"></p>
+    			<p>Drop the ball in any other <span class="red"> red drum </span></p>
+    			<p>None</p>
+    		</td>
+    		<td>
+    			<p><span class="points">+30</span></p>
+    			<p><span class="points">+50</span></p>
+    			<p><span class="points">+10</span></p>
+    			<p><span class="points">0</span></p>
+    		</td>
+    		<td id="task2">
+    			<p><input type="radio" name="task2" data-points=30 ></p>
+    			<p><input type="radio" name="task2" data-points=50></p>
+    			<p><input type="radio" name="task2" data-points=10></p>
+    			<p><input type="radio" name="task2" data-points=0 checked="checked"></p>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>Task 3 - Target Reacquisition</td>
+    		<td><p>Pick up the ball and hold on to it</p></td>
+    		<td><p><span class="points">+10</span></p></td>
+    		<td><p><input type="checkbox" name="task3" data-points=60></span></p></td>
+    	</tr>
+    	<tr>
+    		<td>Task 4 - Localisation</td>
+    		<td><p>Knock the ball off the flare</p></td>
+    		<td><p><span class="points">+50</span></p></td>
+    		<td><p><input type="checkbox" name="task4" data-points=50></span></p></td>
+    	</tr>
+    	<tr>
+    		<td>Timing bonus</td>
+    		<td>
+    			<p>End of attempt (breach the surface) </code></p>
+    			<p>At the end of an attempt, if AUV has successfully completed at least the Navigation task and any other task</p>
+    		</td>
+    		<td>
+    			<p><span class="points">+5</span></p>
+    			<p><span class="points"> (900 - <input id="run-time" type="number" name="run-time" class="input-points"> sec )  * 0.03 <br>= <label id="run-time-bonus"> 0 </label></span></p>
+    		</td>
+    		<td>
+    			<p><input id="end-of-attempt" type="checkbox" name="end-of-attempt" data-points=5></p>
+    			<p></p>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>Penalties</td>
+    		<td>
+    			<p>Touch the gate</p>
+    			<p>Touch the bottom of the pool or wall</p>
+    		</td>
+    		<td>
+    			<p><span class="points">-2</span></p>
+    			<p><span class="points">-5</span></p>
+    		</td>
+    		<td>
+    			<p><input type="checkbox" name="gate-penalty" data-points=-2></p>
+    			<p><input type="checkbox" name="wall-penalty" data-points=-5></p>
+    		</td>
+    	</tr>
+    </table>
+
   </section>
 
   <section id="schedule">
@@ -382,5 +471,6 @@
     ga('create','UA-105062391-1','auto');ga('send','pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <script src="js/calc.js"></script>
 </body>
 </html>
