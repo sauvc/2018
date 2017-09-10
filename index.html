@@ -27,7 +27,8 @@
       <li><a href="#travel">Travel</a></li>
       <li><a href="#venue">Venue</a></li>
       <li><a href="#sponsors">Sponsors</a></li>
-      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#about">About</a></li>
     </ul>
   </nav>
 
@@ -141,7 +142,7 @@
     <p>Detailed explaination of the various tasks of the competition and rules are in the <a href="https://sauvc.github.io/rulebook/">Rulebook</a>.</p>
     <p>The competition is open to students from all over the world. A team may consist of up to 8 participants. At least half of the participants must be students at the time of registration.</p>
 
-    <h3 class="day">Calculate your score! <span id="total-points">Total: 0 pts</span></h3>
+    <h3 id="calculator" class="day">Calculate your score! <span id="total-points">Total: 0 pts</span></h3>
 
     <table class="table-points">
     	<tr>
@@ -163,7 +164,7 @@
     		<td>Task 1 - Navigation</td>
     		<td><p>Pass through the gate</p></td>
     		<td><p><span class="points">+10</span></p></td>
-    		<td><p><input type="checkbox" name="task1" data-points=10></span></p></td>
+    		<td><p><input id="task1-input" type="checkbox" name="task1" data-points=10></span></p></td>
     	</tr>
     	<tr>
     		<td>Task 2 - Target Acquisation</td>
@@ -179,38 +180,38 @@
     			<p><span class="points">+10</span></p>
     			<p><span class="points">0</span></p>
     		</td>
-    		<td id="task2">
+    		<td id="task2-inputs">
     			<p><input type="radio" name="task2" data-points=30 ></p>
     			<p><input type="radio" name="task2" data-points=50></p>
     			<p><input type="radio" name="task2" data-points=10></p>
-    			<p><input type="radio" name="task2" data-points=0 checked="checked"></p>
+    			<p><input id="task2-none" type="radio" name="task2" data-points=0 checked="checked"></p>
     		</td>
     	</tr>
     	<tr>
     		<td>Task 3 - Target Reacquisition</td>
     		<td><p>Pick up the ball and hold on to it</p></td>
     		<td><p><span class="points">+10</span></p></td>
-    		<td><p><input type="checkbox" name="task3" data-points=60></span></p></td>
+    		<td><p><input id="task3-input" type="checkbox" name="task3" data-points=60></span></p></td>
     	</tr>
     	<tr>
     		<td>Task 4 - Localisation</td>
     		<td><p>Knock the ball off the flare</p></td>
     		<td><p><span class="points">+50</span></p></td>
-    		<td><p><input type="checkbox" name="task4" data-points=50></span></p></td>
+    		<td><p><input id="task4-input" type="checkbox" name="task4" data-points=50></span></p></td>
     	</tr>
     	<tr>
     		<td>Timing bonus</td>
     		<td>
     			<p>End of attempt (breach the surface) </code></p>
-    			<p>At the end of an attempt, if AUV has successfully completed at least the Navigation task and any other task</p>
+    			<p>Timing Bonus (If end of attempt + 2 successful tasks)</p>
     		</td>
     		<td>
     			<p><span class="points">+5</span></p>
-    			<p><span class="points"> (900 - <input id="run-time" type="number" name="run-time" class="input-points"> sec )  * 0.03 <br>= <label id="run-time-bonus"> 0 </label></span></p>
+    			<p class="runtime-calc greyedout" ><span class="points"> <span style="font-size: 0.8em">(900 - <label id="run-time-mirror">0</label>) * 0.03 = </span> +<label id="run-time-bonus">0 </label></span></p>
     		</td>
     		<td>
     			<p><input id="end-of-attempt" type="checkbox" name="end-of-attempt" data-points=5></p>
-    			<p></p>
+    			<p><input id="run-time" type="number" name="run-time" class="input-points runtime-calc greyedout" min=0 value=0 disabled> <span class="runtime-calc greyedout">s</span></p>
     		</td>
     	</tr>
     	<tr>
@@ -356,7 +357,22 @@
       </li>
     </ul>
     <p>We are very grateful and would like to say a big Thank You to all the companies that have sponsored SAUVC until now.</p>
-    <p>We are currently looking for sponsors for SAUVC 2018. Interested in encouraging students doing underwater robotics? Contact us at venu@arl.nus.edu.sg</p>
+    <p>We are currently looking for sponsors for SAUVC 2018. Interested in encouraging students doing underwater robotics? Contact us at auvc.singapore@gmail.com</p>
+  </section>
+
+  <section id="contact">
+  <h2>Contact us</h2>
+    <ul class="social">
+      <li>
+        <img src="img/social/email.png" alt="Email logo">
+        <a href="mailto:auvc.singapore@gmail.com">Email us</a>
+      </li>
+      <li>
+        <img src="img/social/messenger.png" alt="Messenger logo">
+        <a href="https://m.me/SingaporeAUVChallenge">Message us</a>
+      </li>
+    </ul>
+
   </section>
 
   <section id="about">
@@ -454,17 +470,6 @@
       <path fill="#A0DCF1" d="M0 12 V9 Q30 10 60 7 T100 8 V12z" />
     </svg>
   </footer>
-  <div id="fb-container">
-    <a id='fb-button' href='//m.me/SingaporeAUVChallenge'> <span id="fb-text">Contact Us</span>
-      <svg class='fb-icon' version="1.1" id="Messenger_Mark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-      y="0px" width="80px" height="80px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-      <path id="Bubble_Shape" d="M499.5,103.503c-217.049,0-393.002,164.533-393.002,367.496
-      c0,115.46,56.945,218.482,146.002,285.854V897.5l134.118-74.394c35.754,10.009,73.646,15.389,112.882,15.389
-      c217.049,0,393.002-164.534,393.002-367.497S716.549,103.503,499.5,103.503z M540.891,596.308L439.247,490.714L243.5,598.967
-      l214.609-227.741L559.754,476.82L755.5,368.567L540.891,596.308z"/></path>
-      </svg>
-    </a>
-  </div>
 
   <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

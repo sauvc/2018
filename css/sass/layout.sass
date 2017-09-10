@@ -80,8 +80,11 @@ code
   p
     margin: .2em
 
+.greyedout
+  color: grey
+
 .input-points
-  width: 50px
+  width: 2.5em
   border: none
   border-bottom: 3px solid #1C455D
   text-align: center
@@ -90,6 +93,9 @@ code
   color: #1C455D
   background: #E5F2F7
 
+  &.greyedout
+    border-bottom: 3px solid grey
+    color: grey
 
 @media only screen and (max-width: 1300px)
   body

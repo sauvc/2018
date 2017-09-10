@@ -37,7 +37,7 @@
     })
 
     document.addEventListener("visibilitychange", function(){
-      if (document.visibilityState == 'visible'){
+      if (document.visibilityState == 'visible' && isElementInViewport(action)){
         fadeIn();
       }else if (document.visibilityState == 'hidden' || document.visibilityState == 'unloaded' ){
         fadeOut();
@@ -47,7 +47,7 @@
 
     function fadeIn(){
       if (!fadingIn){
-        console.log("fading in")
+        // console.log("fading in")
         gain.gain.linearRampToValueAtTime(MAX_GAIN,ac.currentTime+FADE_TIME);
         fadingIn = true;
         fadingOut = false;
@@ -57,7 +57,7 @@
     function fadeOut(){
 
       if (!fadingOut){
-        console.log("fading out")
+        // console.log("fading out")
         gain.gain.linearRampToValueAtTime(0,ac.currentTime+FADE_TIME);
         fadingOut = true;
         fadingIn = false;
