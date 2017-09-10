@@ -116,66 +116,6 @@
 
 
 
-#fb-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position:fixed;
-  bottom: 10px;
-  right: 10px;
-  border-radius: .3em;
-}
-
-#fb-container.inactive {
-  background: #eee;
-  -webkit-filter: saturate(0%);
-  filter: saturate(0%);
-}
-
-#fb-button {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  display: block;
-  position: relative;
-  background: #0084ff;
-  color: white;
-  font-size: 0.9em;
-  border: 0.15em solid #0084ff;
-  border-radius: .3em;
-  text-transform: uppercase;
-  padding: 0.6em 0.9em 0.6em 2em;
-  text-align: center;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: .025em;
-  cursor: pointer;
-  transition: inherit;
-  transition: all 50ms linear;
-}
-#fb-button .fb-icon {
-  position: absolute;
-  top: 0;
-  bottom: 0em;
-  margin: auto 0;
-  left: 0.2em;
-  width: 1.5em;
-  fill: white;
-  height: 1.5em;
-  display: block;
-  transition: inherit;
-}
-
-#fb-button:hover, #fb-container.inactive #fb-button {
-  color: #0084ff;
-  background: white;
-}
-
-#fb-button:hover .fb-icon, #fb-container.inactive #fb-button .fb-icon {
-  fill: #0084ff;
-}
-#fb-button:hover:active, #fb-container.inactive #fb-button:active {
-  transform: scale(0.99);
-}
-
 @media only screen and (max-width: 1450px) {
   .stats li {
     width: 22vw;
@@ -193,23 +133,6 @@
 }
 
 @media only screen and (max-width: 1100px) {
-  #fb-container{
-    border-radius: 1.5em;
-  }
-
-  #fb-button  {
-    border-radius: 1.5em;
-    padding: 1.2em 1.2em 1.2em 1.2em;
-  }
-
-  #fb-button .fb-icon {
-    left: 0.45em;
-  }
-
-  #fb-button #fb-text {
-    display: none;
-  }
-
   .auv-list img {
     max-width: 150px;
   }
