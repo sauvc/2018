@@ -37,7 +37,7 @@ code
   background: #E5F2F7
 
 .table, .table-points
-  display: block
+  display: table
   width: 100%
   border-collapse: collapse
   tr
@@ -79,6 +79,41 @@ code
       text-align: center
   p
     margin: .2em
+
+.table-teams
+  display: table
+  width: 100%
+  border-collapse: collapse
+  tr
+    padding: 1em
+    border-top-style: solid
+    border-top-width: 2px
+    border-color: #eee
+  td
+    &:nth-child(1)
+      text-align: left
+      width: 10%
+    &:nth-child(2)
+      text-align: left
+      width: 20%
+    &:nth-child(3)
+      text-align: left
+      width: 52%
+    &:nth-child(4)
+      width: 18%
+      text-align: left
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+  th
+    text-align: left
+    padding-top: 1em
+    padding-bottom: 1em
+  font-size: .8em
+  p
+    margin: .2em
+
+.flag
+  margin: 0 .5em 0 0
 
 .greyedout
   color: grey
