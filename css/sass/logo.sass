@@ -3,7 +3,7 @@
   position: absolute
   top: 5em
   left: 1em
-  width: 10vw
+  width: 15vw
 
 .logo-menu
   width: 120px
@@ -60,3 +60,14 @@
   100%
     -webkit-transform: translate(-10vw, 0)
     transform: translate(-10vw, 0)
+
+@media only screen and (max-width: 600px)
+  .logo
+    width: 35vw
+  @keyframes move
+    0%
+      -webkit-transform: translate(100vw, 0)
+      transform: translate(100vw, 0)
+    100%
+      -webkit-transform: translate(-35vw, 0)
+      transform: translate(-35vw, 0)
