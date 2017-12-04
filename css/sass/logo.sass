@@ -1,9 +1,12 @@
+$logo-width-normal: 15vw
+$logo-width-mobile: 30vw
+
 .logo
   animation: floating-updown 3s ease-in-out infinite, floating-rotate 3s ease-in-out infinite, move 40s ease-in-out infinite
   position: absolute
   top: 5em
   left: 1em
-  width: 15vw
+  $logo-width-normal: 15vw
 
 .logo-menu
   width: 120px
@@ -58,16 +61,17 @@
     -webkit-transform: translate(100vw, 0)
     transform: translate(100vw, 0)
   100%
-    -webkit-transform: translate(-10vw, 0)
-    transform: translate(-10vw, 0)
+    -webkit-transform: translate(-$logo-width-normal - 10vw, 0)
+    transform: translate(-$logo-width-normal - 10vw, 0)
 
 @media only screen and (max-width: 600px)
   .logo
-    width: 35vw
+    width: $logo-width-mobile
+    
   @keyframes move
     0%
       -webkit-transform: translate(100vw, 0)
       transform: translate(100vw, 0)
     100%
-      -webkit-transform: translate(-35vw, 0)
-      transform: translate(-35vw, 0)
+      -webkit-transform: translate(-$logo-width-mobile - 10vw, 0)
+      transform: translate(-$logo-width-mobile - 10vw, 0)
