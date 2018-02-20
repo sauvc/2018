@@ -513,11 +513,9 @@ code {
     padding: 1em; }
 
 .table td:nth-child(1) {
-  width: 9%; }
+  width: 20%; }
 .table td:nth-child(2) {
-  width: 61%; }
-.table td:nth-child(3) {
-  width: 30%; }
+  width: 80%; }
 
 .table-points {
   font-size: .8em; }
