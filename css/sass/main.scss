@@ -70,7 +70,7 @@
   font-size: 1.4em;
 }
 
-.team, .sponsors {
+.team, .sponsors, .winners {
   list-style-type: none;
   margin: 0 auto;
   display: block;
@@ -78,7 +78,7 @@
   text-align: center;
 }
 
-.sponsors-container {
+.sponsors-container .winners-container{
   padding: 2vw 2vw 2vw;
   background-color: #FBFBFD;
   height: 20vh;
@@ -88,17 +88,17 @@
   align-content: center;
 }
 
-.sponsor-img{
+.sponsor-img .winners-img{
   max-height: 90%
 }
 
-.sponsors li, .team li {
+.team li, .sponsors li, .winners li{
   display: inline-block;
   vertical-align: top;
   margin: .5%;
 }
 
-.sponsors li {
+.sponsors li, .winners li{
   width: 19vw;
   margin: 1em;
 }
