@@ -88,7 +88,7 @@ code
   p
     margin: .2em
 
-.table-teams
+.table-teams, .table-finalists
   display: table
   width: 100%
   border-collapse: collapse
@@ -112,6 +112,7 @@ code
       text-align: left
     padding-top: 0.5em
     padding-bottom: 0.5em
+    padding-right: 0.2em
   th
     text-align: left
     padding-top: 1em
@@ -119,6 +120,23 @@ code
   font-size: .8em
   p
     margin: .2em
+
+.table-finalists
+  td
+    &:nth-child(1)
+      width: 10%
+    &:nth-child(2)
+      width: 20%
+    &:nth-child(3)
+      width: 39%
+    &:nth-child(4)
+      width: 18%
+    &:nth-child(5)
+      width: 13%
+  th.qualification-rank
+    text-align: center
+  td.team-rank
+    text-align: center
 
 .flag
   margin: 0 .5em 0 0
@@ -147,7 +165,7 @@ code
     width: 80%
 
 @media only screen and (max-width: 600px)
-  .table-teams
+  .table-teams, .table-finalists
     td, th
       &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
         width: 100%
