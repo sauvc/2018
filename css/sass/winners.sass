@@ -1,0 +1,30 @@
+.winners
+  li
+    width: 40%
+    display: inline-block
+    position: relative
+    margin: 1em 0
+    img
+      max-width: 100%
+      height: auto
+      box-shadow: 1px 0px #35A6D3, 0px 1px #35A6D3, 2px 1px #35A6D3, 1px 2px #35A6D3, 3px 2px #35A6D3, 2px 3px #35A6D3, 4px 3px #35A6D3, 3px 4px #35A6D3, 5px 4px #35A6D3, 4px 5px #35A6D3, 6px 5px #35A6D3, 5px 6px #35A6D3, 7px 6px #35A6D3, 6px 7px #35A6D3, 8px 7px #35A6D3, 7px 8px #35A6D3
+    &::before
+      content: attr(data-caption)
+      padding: 3px 1em
+      background-color: #35A6D3
+      color: #fff
+      position: absolute
+      top: 15px
+      left: -5px
+  li:nth-child(1)
+    width: 100%
+  li:nth-child(2), li:nth-child(3)
+    padding: 0 2vw
+  p
+    margin: .5em
+    font-size: .8em
+
+@media only screen and (max-width: 800px)
+  .winners li
+    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+      width: 90%
