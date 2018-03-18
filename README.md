@@ -1,5 +1,7 @@
 # sauvc.github.io
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/43a2ddb5ad2c8e07121e/maintainability)](https://codeclimate.com/github/sauvc/sauvc.github.io/maintainability)
+
 Singapore AUV Challenge Website
 
 ## Development
