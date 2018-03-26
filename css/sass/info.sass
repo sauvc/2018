@@ -13,13 +13,13 @@
   vertical-align: top
   margin: 1em
   &:nth-child(4n) .info-title
-    color: #35A6D3
+    color: $primary-color
   &:nth-child(4n+1) .info-title
-    color: #467F9F
+    color: $secondary-color
   &:nth-child(4n+2) .info-title
-    color: #F8C86C
+    color: $highlight-color
   &:nth-child(4n+3) .info-title
-    color: #F15E50
+    color: $important-color
 
 .info-title, .info-content, .type-link
   margin: .2em
@@ -33,7 +33,7 @@
 
 .type-link
   &:link, &:visited
-    color: #35A6D3
+    color: $primary-color
   &:hover, &:active
     text-decoration: underline
   &:after

@@ -1,16 +1,6 @@
-// Pallette:
-// #A0DCF1
-// #F15E50
-// #1C455D
-// #E5F2F7
-// #35A6D3
-// #467F9F
-// #F59A63
-// #F8C86C
-
 body
   font-family: 'Source Sans Pro', sans-serif
-  color: #1C455D
+  color: $dark-color
   font-size: 1.4em
   position: relative
 
@@ -18,20 +8,21 @@ h1, h2, h3, h4, h5, h6
   margin: 0
 
 h2
-  color: #F15E50
+  color: $important-color
   font-size: 3em
   margin: 1em 0
 
 h3
   font-size: 1.5em
   margin: 1em 0
+  color: $dark-color
 
 a
   &:link, &:visited
     text-decoration: none
-    color: #35A6D3
+    color: $primary-color
   &:hover, &:active
-    color: #A0DCF1
+    color: $background-color
     text-decoration: underline
 
 img
@@ -50,7 +41,7 @@ section
   margin: 0 auto
 
 code
-  background: #E5F2F7
+  background: $light-color
 
 .flag
   margin: 0 .5em 0 0
@@ -61,12 +52,12 @@ code
 .input-points
   width: 2.5em
   border: none
-  border-bottom: 3px solid #1C455D
+  border-bottom: 3px solid $dark-color
   text-align: center
   font-family: "Source Sans Pro",sans-serif
   font-weight: bold
-  color: #1C455D
-  background: #E5F2F7
+  color: $dark-color
+  background: $light-color
 
   &.greyedout
     border-bottom: 3px solid grey
