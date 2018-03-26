@@ -93,3 +93,11 @@ table.table-finalists
       width: 18%
     &:nth-child(6)
       width: 8%
+
+@media only screen and (max-width: 600px)
+  table.table-teams, table.table-finalists
+    td, th
+      &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
+        width: 100%
+        display: block
+        padding: .3em

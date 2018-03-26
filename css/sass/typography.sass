@@ -1,0 +1,67 @@
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+h2
+  color: $important-color
+  font-size: 3em
+  margin: 1em 0
+
+h3
+  font-size: 1.5em
+  margin: 1em 0
+  color: $dark-color
+
+a
+  &:link, &:visited
+    text-decoration: none
+    color: $primary-color
+  &:hover, &:active
+    color: $background-color
+    text-decoration: underline
+
+code
+  background: $light-color
+
+.greyedout
+  color: grey
+
+.input-points
+  width: 2.5em
+  border: none
+  border-bottom: 3px solid $dark-color
+  text-align: center
+  font-family: "Source Sans Pro",sans-serif
+  font-weight: bold
+  color: $dark-color
+  background: $light-color
+
+  &.greyedout
+    border-bottom: 3px solid grey
+    color: grey
+
+.highlight
+  background: $highlight-color
+
+.title
+  font-size: 1.1em
+  font-weight: bold
+
+.mobile-title
+  font-size: 1.5em
+  font-weight: bold
+  color: $dark-color
+
+.title:link, .title:visited
+  color: $dark-color
+
+.title:hover, .title:active
+  color: $primary-color
+
+.current:link, .current:visited
+  color: $dark-color
+
+.schedule-day
+  margin: 5em 0
+
+.schedule-note
+  font-size: 0.7em
