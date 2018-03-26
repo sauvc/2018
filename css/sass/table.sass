@@ -1,0 +1,95 @@
+.table-schedule, .table-points
+  display: table
+  width: 100%
+  border-collapse: collapse
+  tr
+    padding: 1em
+    border-top-style: solid
+    border-top-width: 4px
+    &:nth-child(3n)
+      border-top-color: #F15E50
+    &:nth-child(3n+1)
+      border-top-color: #35A6D3
+    &:nth-child(3n+2)
+      border-top-color: #F59A63
+  td
+    padding: 1em
+
+.table-schedule td
+  &:nth-child(1)
+    width: 15%
+  &:nth-child(2)
+    width: 63%
+  &:nth-child(3)
+    width: 20%
+
+.table-schedule td p
+  margin-top: 3px
+  margin-bottom: 3px
+
+.table-points
+  font-size: .8em
+  td
+    &:nth-child(1)
+      width: 30%
+      font-weight: bold
+    &:nth-child(2)
+      text-align: right
+      width: 40%
+    &:nth-child(3)
+      width: 20%
+      text-align: center
+      font-weight: bold
+    &:nth-child(4)
+      width: 10%
+      text-align: center
+  p
+    margin: .2em
+
+.table-teams, .table-finalists
+  display: table
+  width: 100%
+  border-collapse: collapse
+  tr
+    padding: 1em
+    border-top-style: solid
+    border-top-width: 2px
+    border-color: #eee
+  td
+    &:nth-child(1)
+      text-align: left
+      width: 11%
+    &:nth-child(2)
+      text-align: left
+      width: 20%
+    &:nth-child(3)
+      text-align: left
+      width: 52%
+    &:nth-child(4)
+      width: 18%
+      text-align: left
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+    padding-right: 0.2em
+  th
+    text-align: left
+    padding-top: 1em
+    padding-bottom: 1em
+  font-size: .8em
+  p
+    margin: .2em
+
+.table-finalists
+  td
+    &:nth-child(1)
+      width: 5%
+    &:nth-child(2)
+      width: 10%
+    &:nth-child(3)
+      width: 21%
+    &:nth-child(4)
+      width: 38%
+    &:nth-child(5)
+      width: 18%
+    &:nth-child(6)
+      width: 8%
