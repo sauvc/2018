@@ -69,34 +69,66 @@ table.table-teams, table.table-finalists
 // All team table has 4 columns
 table.table-teams
   td
+    &:before
+      display: none
+      font-weight: bold
     &:nth-child(1)
       width: 11%
+      &:before
+        content: "Team ID: "
     &:nth-child(2)
       width: 20%
+      &:before
+        content: "Team Name: "
     &:nth-child(3)
       width: 52%
+      &:before
+        content: "Institute: "
     &:nth-child(4)
       width: 18%
+      &:before
+        content: "Location: "
 
 // Finalist table has 6 columns
 table.table-finalists
   td
+    &:before
+      display: none
+      font-weight: bold
     &:nth-child(1)
       width: 5%
+      &:before
+        content: "Final Rank: "
     &:nth-child(2)
       width: 10%
+      &:before
+        content: "Team ID: "
     &:nth-child(3)
       width: 21%
+      &:before
+        content: "Team Name: "
     &:nth-child(4)
       width: 38%
+      &:before
+        content: "Institute: "
     &:nth-child(5)
       width: 18%
+      &:before
+        content: "Location: "
     &:nth-child(6)
       width: 8%
+      &:before
+        content: "Qualifiers Rank: "
 
 @media only screen and (max-width: 600px)
   table.table-teams, table.table-finalists
-    td, th
+    font-size: 1em
+    th
+      display: none
+    td
+      &:before
+        display: inline-block
+        padding-right: .2em
       &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
         width: 100%
         display: block
