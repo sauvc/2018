@@ -8,9 +8,12 @@ Singapore AUV Challenge Website
 
 - Watch [SASS](http://sass-lang.com/) to CSS to generate file `css/style.css` continuously in the background
     ```
-    sass --watch css/style.sass:css/style.css --style compressed
+    make style
     ```
-- Run `make style` once to generate [SASS](http://sass-lang.com/) to CSS
+- Run HTML linter with [html5validator](https://github.com/svenkreiss/html5validator)
+    ```
+    make lint
+    ```
 
 ## Image sizes and format
 
