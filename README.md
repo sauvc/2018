@@ -1,6 +1,6 @@
 # sauvc.github.io
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/43a2ddb5ad2c8e07121e/maintainability)](https://codeclimate.com/github/sauvc/sauvc.github.io/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/43a2ddb5ad2c8e07121e/maintainability)](https://codeclimate.com/github/sauvc/sauvc.github.io/maintainability) [![Build Status](https://travis-ci.org/sauvc/sauvc.github.io.svg?branch=master)](https://travis-ci.org/sauvc/sauvc.github.io)
 
 Singapore AUV Challenge Website
 
